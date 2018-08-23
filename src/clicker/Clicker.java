@@ -1,0 +1,36 @@
+package clicker;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
+import org.jnativehook.GlobalScreen;
+
+public class Clicker extends Application {
+
+    @Override
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(getClass().getResource("View.fxml"));
+
+        Scene scene = new Scene(root);
+
+        stage.setScene(scene);
+        stage.setAlwaysOnTop(true);
+        stage.getIcons().add(new Image("/res/images/arrow_icon.png"));
+        stage.setTitle("Clicker");
+        stage.setResizable(false);
+        stage.show();
+        GlobalScreen.registerNativeHook();
+    }
+
+    @Override
+    public void stop() throws Exception {
+        GlobalScreen.unregisterNativeHook();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+}

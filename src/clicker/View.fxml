@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="100.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clicker.ViewController">
+    <children>
+      <TextField id="tfTotalClicks" fx:id="tfTotalClicks" layoutX="131.0" layoutY="10.0" prefHeight="25.0" prefWidth="69.0" text="1" />
+      <Label layoutX="14.0" layoutY="14.0" text="Press [SPACE] to click" />
+      <Label layoutX="207.0" layoutY="14.0" text="times, on position" />
+      <Label id="lblCursorPosition" fx:id="lblCursorPosition" layoutX="305.0" layoutY="14.0" text="2000, 2000!" />
+      <ProgressBar id="pbClicks" fx:id="pbClicks" layoutX="20.0" layoutY="56.0" prefHeight="18.0" prefWidth="340.0" progress="0.0" />
+    </children>
+</AnchorPane>
